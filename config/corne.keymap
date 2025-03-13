@@ -82,7 +82,7 @@
                           &trans     &trans     &trans    &trans  &trans          &trans
             >;
 
-            label = "Cursor";
+            label = "Mouse";
         };
     };
 };
