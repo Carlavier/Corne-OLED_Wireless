@@ -109,4 +109,24 @@
             label = "Number";
         };
     };
+
+    / {
+        behaviors {
+            macro_press: macro_press {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <1>;
+                bindings = <>;
+                tap-ms = <0>;
+                press-bindings = <&kp>;
+            };
+    
+            macro_release: macro_release {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <1>;
+                bindings = <>;
+                tap-ms = <0>;
+                release-bindings = <&kp>;
+            };
+        };
+    };
 };
