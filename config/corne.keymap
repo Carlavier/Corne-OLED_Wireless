@@ -29,10 +29,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 5>,
+                <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 5 &kp LGUI &mo 3>;
+                <&mo 3 &kp LGUI &mo 6>;
 
             label = "CUSTOM_MO_3";
         };
@@ -46,7 +46,7 @@
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&mo 3>;
+                <&mo 6>;
 
             label = "WINDOW_SWITCH_1";
         };
@@ -99,32 +99,10 @@
             display-name = "Raise";
             bindings = <
 &kp F1              &kp F2  &kp F3    &kp F4            &kp F5    &kp F6       &kp F7        &kp F8         &kp F9  &kp F10   &kp F11    &kp F12
-&kp LC(LEFT_SHIFT)  &mo 4   &kp LALT  &kp INS           &kp HOME  &kp END      &kp PSCRN     &kp LEFT       &kp UP  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LEFT_SHIFT      &kp N1  &kp N2    &kp N3            &kp N4    &kp N5       &kp N6        &kp N7         &kp N8  &kp N9    &kp N0     &to 4
+&kp LC(LEFT_SHIFT)  &mo 5   &kp LALT  &kp INS           &kp HOME  &kp END      &kp PSCRN     &kp LEFT       &kp UP  &kp DOWN  &kp RIGHT  &kp DEL
+&kp LEFT_SHIFT      &kp N1  &kp N2    &kp N3            &kp N4    &kp N5       &kp N6        &kp N7         &kp N8  &kp N9    &kp N0     &to 3
                                       &kp LEFT_CONTROL  &trans    &kp SPACE    &custom_mo_3  &kp RIGHT_GUI  &trans
             >;
-        };
-
-        cursor_layer {
-            bindings = <
-&none  &none   &none      &none      &none      &none    &none  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-&none  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none   &none      &none      &none      &none    &none  &none           &none         &none           &none            &none
-                          &none      &trans     &none    &none  &none           &none
-            >;
-
-            label = "Mouse";
-        };
-
-        number_layer {
-            bindings = <
-&kp ESC        &kp N1   &kp N2    &kp N3     &kp N4    &kp N5       &kp Y  &kp U      &kp I         &kp O    &kp P     &kp BSPC
-&none          &kp N6   &kp N7    &kp N8     &kp N9    &kp N0       &kp H  &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
-&kp BACKSPACE  &kp SQT  &kp SEMI  &kp MINUS  &kp FSLH  &kp DOT      &kp N  &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                                  &to 0      &none     &kp SPACE    &to 0  &kp ENTER  &kp LEFT_ALT
-            >;
-
-            label = "Number";
         };
 
         config_layer {
@@ -146,6 +124,28 @@
 &none   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none   &none   &none   &trans  &none   &none
                         &none   &trans  &none     &trans  &none   &none
             >;
+        };
+
+        cursor_layer {
+            bindings = <
+&none  &none  &none      &none      &none      &none    &none  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&none  &none  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none  &none  &none      &none      &none      &none    &none  &none           &none         &none           &none            &none
+                         &none      &trans     &none    &none  &none           &none
+            >;
+
+            label = "Mouse";
+        };
+
+        number_layer {
+            bindings = <
+&kp ESC        &kp N1   &kp N2    &kp N3     &kp N4    &kp N5       &kp Y  &kp U      &kp I         &kp O    &kp P     &kp BSPC
+&none          &kp N6   &kp N7    &kp N8     &kp N9    &kp N0       &kp H  &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
+&kp BACKSPACE  &kp SQT  &kp SEMI  &kp MINUS  &kp FSLH  &kp DOT      &kp N  &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
+                                  &to 0      &none     &kp SPACE    &to 0  &kp ENTER  &kp LEFT_ALT
+            >;
+
+            label = "Number";
         };
     };
 };
