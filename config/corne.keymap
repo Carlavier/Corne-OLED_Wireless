@@ -32,7 +32,7 @@
                 <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3 &kp LGUI &mo 6>;
+                <&mo 3 &kp LGUI &mo 5>;
 
             label = "CUSTOM_MO_3";
         };
@@ -46,7 +46,7 @@
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&mo 6>;
+                <&mo 5>;
 
             label = "WINDOW_SWITCH_1";
         };
@@ -99,8 +99,8 @@
             display-name = "Raise";
             bindings = <
 &kp F1              &kp F2  &kp F3    &kp F4            &kp F5    &kp F6       &kp F7        &kp F8         &kp F9  &kp F10   &kp F11    &kp F12
-&kp LC(LEFT_SHIFT)  &mo 4   &kp LALT  &kp INS           &kp HOME  &kp END      &kp PSCRN     &kp LEFT       &kp UP  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LEFT_SHIFT      &kp N1  &kp N2    &kp N3            &kp N4    &kp N5       &kp N6        &kp N7         &kp N8  &kp N9    &kp N0     &to 5
+&kp LC(LEFT_SHIFT)  &mo 6   &kp LALT  &kp INS           &kp HOME  &kp END      &kp PSCRN     &kp LEFT       &kp UP  &kp DOWN  &kp RIGHT  &kp DEL
+&kp LEFT_SHIFT      &kp N1  &kp N2    &kp N3            &kp N4    &kp N5       &kp N6        &kp N7         &kp N8  &kp N9    &kp N0     &to 6
                                       &kp LEFT_CONTROL  &trans    &kp SPACE    &custom_mo_3  &kp RIGHT_GUI  &trans
             >;
         };
@@ -110,10 +110,20 @@
 &bt BT_CLR  &bt BT_SEL 0               &bt BT_SEL 1               &bt BT_SEL 2               &bt BT_SEL 3               &bt BT_SEL 4                 &none       &none       &none             &none              &none       &none
 &none       &window_switch_trigger N1  &window_switch_trigger N2  &window_switch_trigger N3  &window_switch_trigger N4  &window_switch_trigger N5    &kp C_MUTE  &kp K_PREV  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP    &kp C_NEXT  &none
 &none       &window_switch_trigger N6  &window_switch_trigger N7  &window_switch_trigger N8  &window_switch_trigger N9  &window_switch_trigger N0    &none       &none       &none             &kp C_VOLUME_DOWN  &none       &none
-                                                                  &none                      &trans                     &none                        &kp LGUI    &none       &none
+                                                                  &none                      &trans                     &none                        &trans      &none       &none
             >;
 
             label = "Config";
+        };
+
+        second_config {
+            label = "Config";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &none   &none   &none   &none   &none   &none
+&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &none
+&none   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none   &none   &none   &trans  &none   &none
+                        &none   &trans  &none     &trans  &none   &none
+            >;
         };
 
         cursor_layer {
@@ -136,16 +146,6 @@
             >;
 
             label = "Number";
-        };
-
-        second_config {
-            label = "Config";
-            bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none       &none       &none             &none              &none       &none
-&none       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp C_MUTE  &kp K_PREV  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP    &kp C_NEXT  &none
-&none       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &none       &none       &none             &kp C_VOLUME_DOWN  &none       &none
-                                        &none         &trans        &none           &kp LGUI    &none       &none
-            >;
         };
     };
 };
