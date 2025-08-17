@@ -46,7 +46,7 @@
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&mo 6>;
+                <&mo 4>;
 
             label = "WINDOW_SWITCH_1";
         };
