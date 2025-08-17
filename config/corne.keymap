@@ -112,20 +112,14 @@
 
     / {
         behaviors {
-            macro_press: macro_press {
+            win_layer3: win_layer3 {
                 compatible = "zmk,behavior-macro";
-                #binding-cells = <1>;
-                bindings = <>;
-                tap-ms = <0>;
-                press-bindings = <&kp>;
-            };
-    
-            macro_release: macro_release {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <1>;
-                bindings = <>;
-                tap-ms = <0>;
-                release-bindings = <&kp>;
+                #binding-cells = <0>;
+                bindings = <
+                    &macro_press LGUI   // giữ Win
+                    &mo 3               // bật layer 3
+                    &macro_release LGUI // khi thả thì nhả Win
+                >;
             };
         };
     };
