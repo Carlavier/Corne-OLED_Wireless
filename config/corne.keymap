@@ -36,6 +36,20 @@
 
             label = "CUSTOM_MO_3";
         };
+
+        window_switch_trigger: window_switch_1 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&mo 6>;
+
+            label = "WINDOW_SWITCH_1";
+        };
     };
 
     keymap {
@@ -93,10 +107,10 @@
 
         config_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none       &none       &none             &none              &none       &none
-&none       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp C_MUTE  &kp K_PREV  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP    &kp C_NEXT  &none
-&none       &none         &none         &none         &none         &none           &none       &none       &none             &kp C_VOLUME_DOWN  &none       &none
-                                        &none         &trans        &none           &kp LGUI    &none       &none
+&bt BT_CLR  &bt BT_SEL 0               &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none       &none       &none             &none              &none       &none
+&none       &window_switch_trigger N1  &kp N2        &kp N3        &kp N4        &kp N5          &kp C_MUTE  &kp K_PREV  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP    &kp C_NEXT  &none
+&none       &none                      &none         &none         &none         &none           &none       &none       &none             &kp C_VOLUME_DOWN  &none       &none
+                                                     &none         &trans        &none           &kp LGUI    &none       &none
             >;
 
             label = "Config";
@@ -122,6 +136,16 @@
             >;
 
             label = "Number";
+        };
+
+        second_config {
+            label = "Config2";
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none       &none       &none             &none              &none       &none
+&none       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp C_MUTE  &kp K_PREV  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP    &kp C_NEXT  &none
+&none       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &none       &none       &none             &kp C_VOLUME_DOWN  &none       &none
+                                        &none         &trans        &none           &kp LGUI    &none       &none
+            >;
         };
     };
 };
