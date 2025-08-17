@@ -32,7 +32,7 @@
                 <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 3 &kp LGUI>;
+                <&mo 3 &kp LGUI &mo 6>;
 
             label = "CUSTOM_MO_3";
         };
