@@ -99,10 +99,10 @@
 
             display-name = "Movement";
             bindings = <
-&kp F1          &kp F2  &kp F3           &kp F4            &kp F5    &kp F6     &kp F7             &kp F8         &kp F9     &kp F10   &kp F11    &kp F12
-&kp LS(TAB)     &mo 5   &kp PRINTSCREEN  &kp LALT          &kp HOME  &kp END    &none              &kp LEFT       &kp UP     &kp DOWN  &kp RIGHT  &kp DEL
-&kp LEFT_SHIFT  &none   &kp LC(PAGE_UP)  &kp LC(PG_DN)     &none     &to 6      &kp INS            &kp PG_DN      &kp PG_UP  &none     &none      &kp RSHFT
-                                         &kp LEFT_CONTROL  &trans    &trans     &window_hold_mo 3  &kp RIGHT_GUI  &trans
+&kp F1          &kp F2               &kp F3           &kp F4            &kp F5           &kp F6     &kp F7             &kp F8         &kp F9     &kp F10   &kp F11    &kp F12
+&kp LA(TAB)     &mo 5                &kp PRINTSCREEN  &kp LALT          &kp HOME         &kp END    &none              &kp LEFT       &kp UP     &kp DOWN  &kp RIGHT  &kp DEL
+&kp LEFT_SHIFT  &kp LS(LA(LC(TAB)))  &kp LC(PAGE_UP)  &kp LC(PG_DN)     &kp LC(LA(TAB))  &to 6      &kp INS            &kp PG_DN      &kp PG_UP  &none     &none      &kp RSHFT
+                                                      &kp LEFT_CONTROL  &trans           &trans     &window_hold_mo 3  &kp RIGHT_GUI  &trans
             >;
         };
 
@@ -147,6 +147,15 @@
             >;
 
             label = "Number";
+        };
+
+        window_switch {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none  &none
+            >;
         };
     };
 };
