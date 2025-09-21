@@ -184,6 +184,8 @@
 &none  &kp LS(TAB)  &none  &none  &kp TAB  &none    &none  &none  &none  &none  &none  &none
                            &none  &none    &none    &none  &none  &none
             >;
+
+            label = "Movement";
         };
     };
 };
