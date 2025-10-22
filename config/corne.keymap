@@ -127,10 +127,10 @@
 
             display-name = "Movement";
             bindings = <
-&kp F1          &kp F2                &kp F3         &kp F4            &kp F5            &kp F6     &kp F7             &kp F8            &kp F9            &kp F10           &kp F11           &kp F12
-&kp PSCRN       &mo 5                 &kp LA(SPACE)  &kp LALT          &kp HOME          &kp END    &kp INS            &kp LEFT          &kp UP            &kp DOWN          &kp RIGHT         &kp DEL
-&kp LEFT_SHIFT  &alt_trigger LS(TAB)  &kp LC(TAB)    &kp LC(LS(TAB))   &alt_trigger TAB  &to 6      &kp LC(NUMBER_1)   &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)  &kp LC(NUMBER_5)  &kp RSHFT
-                                                     &kp LEFT_CONTROL  &trans            &trans     &window_hold_mo 3  &kp RIGHT_GUI     &trans
+&kp F1          &kp F2                &kp F3           &kp F4            &kp F5            &kp F6     &kp F7             &kp F8            &kp F9            &kp F10           &kp F11           &kp F12
+&kp PSCRN       &mo 5                 &kp LA(SPACE)    &kp LALT          &kp HOME          &kp END    &kp INS            &kp LEFT          &kp UP            &kp DOWN          &kp RIGHT         &kp DEL
+&kp LEFT_SHIFT  &alt_trigger LS(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)       &alt_trigger TAB  &to 6      &kp LC(NUMBER_1)   &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)  &kp LC(NUMBER_5)  &kp RSHFT
+                                                       &kp LEFT_CONTROL  &trans            &trans     &window_hold_mo 3  &kp RIGHT_GUI     &trans
             >;
         };
 
